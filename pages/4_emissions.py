@@ -6,6 +6,7 @@ import pandas as pd
 
 st.title('View Emissions Data in Your Location')
 
+st.write('The first step in solving a problem is usually understanding it. In order to solve the emissions problem, it seems reasonable that we should first understand the extent of it.')
 st.write('Enter your longitude and lattitude to view emissions data in your location')
 
 if 'longitude' not in st.session_state:

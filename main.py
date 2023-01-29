@@ -1,7 +1,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-title = 'CrashApp: Travel Better'
+title = 'CrashApp: Better Transportation for Tomorrow'
 
 mission = '''Transportation is vital to humanity. We go places to get food, learn, explore, and even for the fun of it.
 Naturally, we try to do this in the best way possible. For General Motors, this means zero crashes, zero emissions,
