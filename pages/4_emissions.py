@@ -25,6 +25,8 @@ st.map(coordinates)
 begin_date = st.text_input('Beginning Date', '2022-10-11')
 end_date = st.text_input('End Date', '2022-11-11')
 
+
+st.caption('Note: all charts are not on the same x scale since some chemicals like Methane had less data points. Also, having a large date range could lead to performance issues.')
 # Request urls to view averages of each chemical
 methane_url = f'https://api.v2.emissions-api.org/api/v2/methane/statistics.json?geoframe={st.session_state.longitude-2}&geoframe={st.session_state.lattitude-2}&geoframe={st.session_state.longitude+2}&geoframe={st.session_state.lattitude+2}&interval=day&begin={begin_date}&end={end_date}&limit=100&offset=0'
 carbon_monoxide_url = f'https://api.v2.emissions-api.org/api/v2/carbonmonoxide/statistics.json?geoframe={st.session_state.longitude-2}&geoframe={st.session_state.lattitude-2}&geoframe={st.session_state.longitude+2}&geoframe={st.session_state.lattitude+2}&interval=day&begin={begin_date}&end={end_date}&limit=100&offset=0'

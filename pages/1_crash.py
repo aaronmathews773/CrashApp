@@ -3,7 +3,7 @@ import pandas as pd
 
 st.title('Crash Data in San Jose')
 
-st.write('Finding patterns in car crash data can help innovators design safer cars. Here, we look at some car crash data from the city of San Jose. We used San Jose because the data was publicly available and easy to work with.')
+st.write('Finding patterns in car crash data can help innovators design safer cars. Here, we look at some car crash data from the city of San Jose from 2011-2020. We used San Jose because the data was publicly available and easy to work with.')
 
 data = pd.read_csv('crashdata2011-2020.csv')
 truncated_data = data.head(3000)
@@ -29,3 +29,8 @@ most_common_lighting = truncated_data['Lighting'].value_counts()
 st.write(most_common_lighting)
 
 st.bar_chart(most_common_lighting)
+
+st.write('Use the slider to try and find some patterns yourself!')
+column = st.select_slider('Slide to change the column', options=truncated_data.columns)
+most_common_in_column = truncated_data[column].value_counts()
+st.bar_chart(most_common_in_column)
