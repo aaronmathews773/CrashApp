@@ -4,18 +4,16 @@ import json
 
 st.map()
 
-lattitude1 = 30.60
-lattitude2 = 30.64
-longitude1 = 96.30
-longitude2 = 96.34
+lattitude = 30.628
+longitude = 96.3344
 
 begin_date = '2022-10-11'
 end_date = '2022-11-11'
 
-methane_url = f'https://api.v2.emissions-api.org/api/v2/methane/statistics.json?geoframe={longitude1-1}&geoframe={lattitude1-1}&geoframe={longitude2+1}&geoframe={lattitude2+1}&interval=day&begin={begin_date}&end={end_date}&limit=100&offset=0'
-carbon_monoxide_url = f'https://api.v2.emissions-api.org/api/v2/carbonmonoxide/statistics.json?geoframe={longitude1-1}&geoframe={lattitude1-1}&geoframe={longitude2+1}&geoframe={lattitude2+1}&interval=day&begin={begin_date}&end={end_date}&limit=100&offset=0'
-ozone_url = f'https://api.v2.emissions-api.org/api/v2/ozone/statistics.json?geoframe={longitude1-1}&geoframe={lattitude1-1}&geoframe={longitude2+1}&geoframe={lattitude2+1}&interval=day&begin={begin_date}&end={end_date}&limit=100&offset=0'
-nitrogen_dioxide_url = f'https://api.v2.emissions-api.org/api/v2/nitrogendioxide/statistics.json?geoframe={longitude1-1}&geoframe={lattitude1-1}&geoframe={longitude2+1}&geoframe={lattitude2+1}&interval=day&begin={begin_date}&end={end_date}&limit=100&offset=0'
+methane_url = f'https://api.v2.emissions-api.org/api/v2/methane/statistics.json?geoframe={longitude-1}&geoframe={lattitude-1}&geoframe={longitude+1}&geoframe={lattitude+1}&interval=day&begin={begin_date}&end={end_date}&limit=100&offset=0'
+carbon_monoxide_url = f'https://api.v2.emissions-api.org/api/v2/carbonmonoxide/statistics.json?geoframe={longitude-1}&geoframe={lattitude-1}&geoframe={longitude+1}&geoframe={lattitude+1}&interval=day&begin={begin_date}&end={end_date}&limit=100&offset=0'
+ozone_url = f'https://api.v2.emissions-api.org/api/v2/ozone/statistics.json?geoframe={longitude-1}&geoframe={lattitude-1}&geoframe={longitude+1}&geoframe={lattitude+1}&interval=day&begin={begin_date}&end={end_date}&limit=100&offset=0'
+nitrogen_dioxide_url = f'https://api.v2.emissions-api.org/api/v2/nitrogendioxide/statistics.json?geoframe={longitude-1}&geoframe={lattitude-1}&geoframe={longitude+1}&geoframe={lattitude+1}&interval=day&begin={begin_date}&end={end_date}&limit=100&offset=0'
 
 methane_object = requests.get(methane_url).json()
 carbon_monoxide_object = requests.get(carbon_monoxide_url).json()
