@@ -1,9 +1,13 @@
 import streamlit as st
-import json
+import streamlit.components.v1 as components
 
-st.write('Crash App: Drive Safer')
+title = 'CrashApp: Travel Better'
+mission = '''Transportation is vital to humanity. We go places to get food, learn, explore, and even for the fun of it.
+Naturally, we try to do this in the best way possible. For General Motors, this means zero crashes, zero emissions,
+and zero congestions. Our project attempts to give GM easy access to data on crash, emission, and traffic data, because knowledge is power.'''
 
-x = st.slider('x')
-st.write(x, 'squared is', x*x)
+st.title(title)
+
+st.write(mission)
 
 st.write('Created by Aaron Mathews and Caleb Lee for TAMU Hack 2023')
