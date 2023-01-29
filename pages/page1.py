@@ -1,14 +1,17 @@
 import folium
 import streamlit as st
+import struct
 
 from streamlit_folium import st_folium
 
 
-latitude = 30.6152
-longitude = -96.3415
+latitude = 30.615242731499126
+longitude = -96.34158496852066
 
-st.text_input(latitude)
-st.text_input(longitude)
+
+
+st.number_input("latitude", latitude)
+st.number_input("longitude", longitude)
 
 # Display map
 m = folium.Map(location=[latitude, longitude], zoom_start=16)
