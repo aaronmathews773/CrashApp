@@ -11,4 +11,6 @@ st.title(title)
 
 st.write(mission)
 
+st.write('Also, the app might need to be refreshed every once in a while if a button was clicked.')
+
 st.write('Created by Aaron Mathews and Caleb Lee for TAMU Hack 2023')
