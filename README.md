@@ -12,3 +12,6 @@ APIs Used:
 Datasets Used:
 - https://data.sanjoseca.gov/dataset/crashes-data
 - https://data.sanjoseca.gov/dataset/average-daily-traffic1
+
+The Video Presentation:
+- https://www.youtube.com/watch?v=4oVQhbBjIcE&t=223s
